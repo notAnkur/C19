@@ -80,6 +80,11 @@ detector.fit_generator(
 	validation_steps=validation_samples//batch_size)
 
 detector.save_weights('first.h5')
+# serializing as json
+# blah blah json blah blah
+detector_json = detector.to_json()
+with open("first.json", "w") as json_file:
+    json_file.write(detector_json)
 
 img_pred=image.load_img('DATA/Validation/NONCovid/5.jpeg',target_size=(150,150))
 img_pred=image.img_to_array(img_pred)
