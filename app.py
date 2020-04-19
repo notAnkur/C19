@@ -1,5 +1,5 @@
-from flask import Flask, flash, request, redirect, url_for
-from flask_cors import CORS, cross_origin
+from flask import Flask, request
+from flask_cors import CORS
 import numpy as np
 import keras.models
 from keras.preprocessing import image
